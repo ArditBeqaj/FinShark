@@ -1,36 +1,40 @@
-import React from 'react'
-import hero from "./hero.png"
-import { Link } from 'react-router-dom'
+import React from "react";
+import hero from "./hero2.jpg";
+import { Link } from "react-router-dom";
 
 interface Props {}
 
 const Hero = (props: Props) => {
   return (
     <section id="hero">
-      <div className="container flex flex-col-reverse mx-auto p-8 lg:flex-row">
-        <div className="flex flex-col space-y-10 mb-44 m-10 lg:m-10 xl:m-20 lg:mt:16 lg:w-1/2 xl:mb-52">
-          <h1 className="text-5xl font-bold text-center lg:text-6xl lg:max-w-md lg:text-left">
-            Financial data with no news.
+      <div className="container mx-auto flex flex-col items-center p-8 space-y-12">
+        <div className="mx-auto">
+          <img
+            src={hero}
+            alt="Hero Image"
+            className="w-full max-w-4xl h-auto aspect-[16/6] object-cover rounded-3xl shadow-xl"
+          />
+        </div>
+        <div className="flex flex-col space-y-6 lg:space-y-10 items-center">
+          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold text-center text-gray-900 tracking-tight leading-tight">
+            Financial Data, Unfiltered and Real.
           </h1>
-          <p className="text-2xl text-center text-gray-400 lg:max-w-md lg:text-left">
-            Search relevant financial documents without fear mongering and fake
-            news.
+          <p className="text-xl text-center text-gray-600 max-w-2xl">
+            Navigate through essential financial documents, without the
+            distractions of sensational headlines and fake news.
           </p>
-          <div className="mx-auto lg:mx-0">
+          <div className="flex justify-center">
             <Link
               to="/search"
-              className="py-5 px-10 text-2xl font-bold text-white bg-lightGreen rounded lg:py-4 hover:opacity-70"
+              className="px-8 py-4 text-xl font-semibold text-white bg-lightGreen rounded-full shadow-lg hover:bg-darkGreen transform hover:scale-105 transition-all duration-300 ease-out"
             >
               Get Started
             </Link>
           </div>
         </div>
-        <div className="mb-24 mx-auto md:w-180 md:px-10 lg:mb-0 lg:w-1/2">
-          <img src={hero} alt="" />
-        </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
